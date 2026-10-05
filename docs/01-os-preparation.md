@@ -2,7 +2,6 @@
 
 Run these steps on **every** node (masters, workers, and, where noted, the load balancer). Commands are shown for **RHEL-family** (RHEL / Rocky / Alma 9) and **Ubuntu**.
 
-> **Shortcut:** [`scripts/prepare-node.sh`](../scripts/prepare-node.sh) automates steps 1 to 4 (hosts, swap, SELinux, kernel modules, sysctl). Run it as root, then continue from step 5.
 
 ## Prerequisites
 

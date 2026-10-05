@@ -102,5 +102,4 @@ sudo systemctl restart containerd
 If the node was a control-plane member, remove it from the cluster first (`kubectl delete node <node>`) and confirm its etcd member is gone before re-joining.
 
 ---
-
-Next: [07. Mapping this lab to OpenShift](07-openshift-mapping.md)
+ 

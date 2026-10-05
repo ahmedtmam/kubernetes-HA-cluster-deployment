@@ -1,8 +1,6 @@
 # Usage (on master1):
 #   sudo kubeadm init --config configs/kubeadm-config.yaml --upload-certs
 #
-# kubernetesVersion is omitted on purpose: kubeadm defaults to its own version,
-# so the installed kubeadm package decides the cluster version.
 apiVersion: kubeadm.k8s.io/v1beta4
 kind: ClusterConfiguration
 clusterName: ha-lab
@@ -11,15 +9,7 @@ controlPlaneEndpoint: "10.31.8.47:6443"
 networking:
   podSubnet: 10.244.0.0/16        # must match CALICO_IPV4POOL_CIDR
   serviceSubnet: 10.96.0.0/12
-# Add extra names/IPs clients will use to reach the API (needed if you connect by DNS name)
-# apiServer:
-#   certSANs:
-#     - "k8s-api.lab.local"
-#     - "10.31.8.50"
 ---
 apiVersion: kubelet.config.k8s.io/v1beta1
 kind: KubeletConfiguration
 cgroupDriver: systemd              # must match containerd SystemdCgroup = true
-# Production: issue properly signed kubelet serving certs (then Metrics Server needs no
-# --kubelet-insecure-tls). Approve the CSRs with: kubectl certificate approve <name>
-# serverTLSBootstrap: true

@@ -47,7 +47,7 @@ Two choices for exposing it:
 
 With MetalLB in place, the `cloud` manifest is usually the better fit.
 
-> **Check project status before building on it.** The Kubernetes project announced the retirement of the community **ingress-nginx** controller (best-effort maintenance ending around March 2026). Verify its current state, and for new designs evaluate the **Gateway API** and its implementations, or a vendor-supported ingress. On OpenShift this role is played by the built-in Ingress Operator and Routes (see [07-openshift-mapping.md](07-openshift-mapping.md)).
+> **Check project status before building on it.** The Kubernetes project announced the retirement of the community **ingress-nginx** controller (best-effort maintenance ending around March 2026). Verify its current state, and for new designs evaluate the **Gateway API** and its implementations, or a vendor-supported ingress. On OpenShift this role is played by the built-in Ingress Operator and Routes.
 
 ## 3. Metrics Server
 

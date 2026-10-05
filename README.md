@@ -63,7 +63,7 @@ Every component that talks to the API server (kubectl, kubelets, kube-proxy, con
 
 ## Quick start
 
-1. **Prepare all nodes**: hostnames, swap, SELinux, kernel modules, sysctl, firewall, containerd, kubeadm packages. See [docs/01-os-preparation.md](docs/01-os-preparation.md) or run [`scripts/prepare-node.sh`](scripts/prepare-node.sh).
+1. **Prepare all nodes**: hostnames, swap, SELinux, kernel modules, sysctl, firewall, containerd, kubeadm packages. See [docs/01-os-preparation.md](docs/01-os-preparation.md).
 2. **Build the load balancer**: [docs/02-load-balancer.md](docs/02-load-balancer.md), config in [`configs/haproxy.cfg`](configs/haproxy.cfg).
 3. **Bootstrap the cluster**: [docs/03-cluster-bootstrap.md](docs/03-cluster-bootstrap.md)
    ```bash
@@ -71,8 +71,7 @@ Every component that talks to the API server (kubectl, kubelets, kube-proxy, con
    sudo kubeadm init --config configs/kubeadm-config.yaml --upload-certs
    ```
 4. **Install add-ons**: [docs/04-addons.md](docs/04-addons.md)
-5. **Verify**: `./scripts/verify-cluster.sh`
-6. **Operate it**: [docs/05-day2-operations.md](docs/05-day2-operations.md) and [docs/06-troubleshooting.md](docs/06-troubleshooting.md)
+5. **Operate it**: [docs/05-day2-operations.md](docs/05-day2-operations.md) and [docs/06-troubleshooting.md](docs/06-troubleshooting.md)
 
 ---
 
@@ -89,17 +88,14 @@ kubernetes-ha-cluster-deployment/
 │   ├── keepalived.conf          # optional VIP for an HA load-balancer pair
 │   ├── kubeadm-config.yaml      # cluster definition for kubeadm init
 │   └── metallb-pool.yaml        # MetalLB address pool
-├── docs/
-│   ├── 01-os-preparation.md
-│   ├── 02-load-balancer.md
-│   ├── 03-cluster-bootstrap.md
-│   ├── 04-addons.md
-│   ├── 05-day2-operations.md
-│   ├── 06-troubleshooting.md
-│   └── 07-openshift-mapping.md  # how this lab maps to Red Hat OpenShift
-└── scripts/
-    ├── prepare-node.sh
-    └── verify-cluster.sh
+└── docs/
+    ├── 01-os-preparation.md
+    ├── 02-load-balancer.md
+    ├── 03-cluster-bootstrap.md
+    ├── 04-addons.md
+    ├── 05-day2-operations.md
+    └── 06-troubleshooting.md
+
 ```
 
 ---
@@ -122,6 +118,4 @@ kubernetes-ha-cluster-deployment/
 - [MetalLB documentation](https://metallb.io)
 - [Helm documentation](https://helm.sh/docs/)
 
-## License
 
-MIT, see [LICENSE](LICENSE).

@@ -91,7 +91,6 @@ for n in worker1 worker2 worker3; do kubectl label node $n node-role.kubernetes.
 
 ## 5. Verify
 
-Run [`scripts/verify-cluster.sh`](../scripts/verify-cluster.sh), or manually:
 
 ```bash
 kubectl get nodes -o wide                     # 6 nodes Ready (3 control-plane, 3 worker)
