@@ -1,0 +1,28 @@
+# Secrets and credentials: never commit these
+admin.conf
+kubeconfig*
+*.kubeconfig
+cluster-*.yaml
+.kube/
+join-command*
+*join*.txt
+*.key
+*.pem
+*.crt
+.env
+*.secret
+
+# etcd snapshots and backups
+*.db
+etcd-backup*/
+
+# Downloaded manifests / helper scripts
+calico.yaml
+components.yaml
+get_helm.sh
+
+# Editor / OS noise
+.vscode/
+.idea/
+*.swp
+.DS_Store

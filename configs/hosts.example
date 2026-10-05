@@ -1,0 +1,7 @@
+10.31.8.41 master1 k8s-master-01
+10.31.8.42 master2 k8s-master-02
+10.31.8.43 master3 k8s-master-03
+10.31.8.44 worker1 k8s-worker-01
+10.31.8.45 worker2 k8s-worker-02
+10.31.8.46 worker3 k8s-worker-03
+10.31.8.47 loadbalancer k8s-ha-loadbalancer
